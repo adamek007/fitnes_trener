@@ -1,0 +1,30 @@
+// Přepsání Bootstrap proměnných
+$primary: #e63946;
+$secondary: #1d3557;
+$body-bg: #f1faee;
+$font-family-base: 'Segoe UI', sans-serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Vlastní hover efekt pro tlačítko
+.btn-custom {
+  @extend .btn;
+  @extend .btn-primary;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.05);
+  }
+}
+
+// Vizuální efekt
+.box-shadow-effect {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+}
